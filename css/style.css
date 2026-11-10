@@ -33,14 +33,14 @@ header{
   margin-bottom: 40px;
 }
 
-section{
+section {
   background: white;
-  padding: 20px;
-  margin-bottom:20px;
-  border-radius:5px;
-  max-width:800px;
+  padding: 40px; 
+  margin: 0 auto 40px auto; 
+  border-radius: 8px; 
+  width: 100%; 
+  max-width: 1100px; 
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  
 }
 
 p{
@@ -210,4 +210,249 @@ button:active {
   cursor: pointer;
 }
 
+
+/* ==============================
+   NAVIGATION BAR
+================================= */
+
+.portfolio-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: rgba(248, 250, 252, 0.95);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.portfolio-header__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Your name/logo */
+.portfolio-logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+/* Desktop navigation */
+.desktop-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.desktop-nav a,
+.mobile-menu__panel a {
+  color: #475569;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.desktop-nav a:hover,
+.mobile-menu__panel a:hover {
+  color: #2563eb;
+}
+
+/* Mobile menu is hidden on larger screens */
+.mobile-menu {
+  display: none;
+}
+
+/* ==============================
+   HERO SECTION
+================================= */
+
+.hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+
+  padding: 80px 24px;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(37, 99, 235, 0.09),
+      transparent 35%
+    ),
+    #f8fafc;
+}
+
+.hero__content {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; 
+}
+
+/* Introductory label */
+.hero__eyebrow {
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+/* Main heading */
+.hero h1 {
+  max-width: 750px;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: #0f172a;
+  margin: 0 auto 24px auto;
+}
+
+.hero__description {
+  max-width: 620px;
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0 auto 30px auto;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+/* Call-to-action buttons */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center; 
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 8px;
+
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  background: #2563eb;
+  color: white;
+}
+
+.button--primary:hover {
+  background: #1d4ed8;
+}
+
+.button--secondary {
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  background: white;
+}
+
+/* Technology labels */
+.hero__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 38px;
+  justify-content: center;
+}
+
+.hero__skills span {
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  background: #e2e8f0;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ==============================
+   RESPONSIVE NAVIGATION
+================================= */
+
+/* Smaller screens */
+@media (max-width: 650px) {
+
+  .portfolio-header__inner {
+    padding: 16px 20px;
+  }
+
+  /* Hide desktop navigation */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Show mobile dropdown */
+  .mobile-menu {
+    display: block;
+    position: relative;
+  }
+
+  .mobile-menu summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #0f172a;
+    list-style: none;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-menu__panel {
+    position: absolute;
+    top: 35px;
+    right: 0;
+
+    width: 180px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Mobile hero adjustments */
+  .hero {
+    min-height: 70vh;
+    padding: 65px 20px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .hero__description {
+    font-size: 1rem;
+  }
+}
+
+/* Keyboard accessibility */
+.portfolio-header a:focus-visible,
+.mobile-menu summary:focus-visible,
+.hero a:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 4px;
+}
 
