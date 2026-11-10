@@ -4,27 +4,6 @@ console.log("JavaScript is connected");
 // creating the Heading constant
 const nameHeading = document.querySelector("#name");
 
-//changing the heading 
-nameHeading.textContent = "Rildo Tola - Front-End Developer";
-
-const ogText = "Rildo Tola - Front-End Developer";
-
-const newText = "Building the future with code 🚀";
-
-nameHeading.style.color = "#4f46e5";
-
-// Get elements from the page
-const button = document.getElementById("changeTextBtn");
-
-// Listen for a click
-button.addEventListener("click", () => {
-  if (nameHeading.textContent === ogText){
-nameHeading.textContent = newText
-  } else{
-nameHeading.textContent = ogText
-  }
-});
-
 // project objects
 const projects = [
   {
