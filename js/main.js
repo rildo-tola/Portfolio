@@ -62,7 +62,7 @@ const projects = [
     title: "React Project Showcase",
 
     description:
-      "A React application demonstrating API integration, reusable components, custom hooks and dynamic data handling.",
+  "A React-based application that retrieves and displays posts from an external API. Built with reusable components and a custom hook to manage API requests, loading states, errors and user-based filtering.",
 
     features: [
       "Fetches posts from the JSONPlaceholder API",
@@ -79,7 +79,21 @@ const projects = [
     github: "https://github.com/rildo-tola/react-project-showcase",
 
     image: "images/React-Showcase.png"
-  }
+  },
+
+   {
+title : "Responsive Portfolio",
+description: "A mobile-first personal portfolio website designed to showcase projects, skills, and contact information in a clean and accessible way. Built with vanilla web technologies, focusing on responsiveness, usability, and maintainable code. ",
+features: [
+      "Fully responsive layout using mobile-first design principles",
+      "Clean and intuitive navigation across all screen sizes",
+      "Organized folder structure and eusable styles"
+    ],
+    tech: "HTML, CSS, JavaScript",
+    live: "https://rildo-tola.github.io/phase-1-portfolio/",
+    github: "https://github.com/rildo-tola/phase-1-portfolio",
+    image: "images/Updated-Portfolio.png"
+  },
 
 ];
 
