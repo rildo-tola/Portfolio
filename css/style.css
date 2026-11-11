@@ -845,3 +845,19 @@ summary:focus-visible {
     font-size: 1.65rem;
   }
 }
+
+/* Prevent accidental horizontal scrolling */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Prevent large elements from exceeding their containers */
+img,
+video,
+iframe {
+  max-width: 100%;
+}
