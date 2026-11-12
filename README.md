@@ -5,7 +5,7 @@ A personal portfolio website built with HTML, CSS and JavaScript to showcase my 
 
 ## Live Portfolio
 
-[View My Portfolio](https://rildo-tola.github.io/phase-1-portfolio/)
+[View My Portfolio](https://rildo-tola.github.io/Portfolio/)
 
 ## Features
 
